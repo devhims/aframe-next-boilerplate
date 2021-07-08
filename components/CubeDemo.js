@@ -15,7 +15,6 @@ const CubeDemo = () => {
     <>
       <Head>
         <title>CubeDemo</title>
-        {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
       </Head>
       <Scene>
         <a-assets>
