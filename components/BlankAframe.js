@@ -25,12 +25,12 @@ const BlankAframe = () => {
       {xrReady && (
         <>
           <Scene
-            xrextras-tap-recenter
+            xrextras-gesture-detector
             xrextras-almost-there
             xrextras-loading=""
             xrextras-runtime-error
-            xrextras-gesture-detector
             xrweb="disableWorldTracking: true"
+            id="ascene"
           >
             <Entity
               primitive="a-light"
@@ -42,7 +42,12 @@ const BlankAframe = () => {
               position="5 10 7"
             />
 
-            <Entity primitive="a-camera" position="0 2 2" />
+            <Entity
+              primitive="a-camera"
+              position="0 4 10"
+              raycaster="objects: .cantap"
+              cursor="fuse: false; rayOrigin: mouse;"
+            />
 
             <Entity
               primitive="a-box"
