@@ -30,7 +30,7 @@ const BlankAframe = () => {
             xrextras-loading=""
             xrextras-runtime-error
             xrextras-gesture-detector
-            xrweb
+            xrweb="disableWorldTracking: true"
           >
             <Entity
               primitive="a-light"
