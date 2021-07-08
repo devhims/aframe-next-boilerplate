@@ -2,7 +2,6 @@ import { Entity, Scene } from 'aframe-react';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 // import Script from 'next/script';
-import 'aframe';
 
 const BlankAframe = () => {
   const [xrReady, setXrReady] = useState(false);
