@@ -11,10 +11,10 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* <link rel="stylesheet" href="./styles/video.css" /> */}
-          {/* <script
+          <script
             async
             src="//cdn.8thwall.com/web/aframe/8frame-1.1.0.min.js"
-          ></script> */}
+          ></script>
 
           <script
             async
