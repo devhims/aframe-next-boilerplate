@@ -1,15 +1,22 @@
 import { Entity, Scene } from 'aframe-react';
 import { useState } from 'react';
 import 'aframe';
+import Head from 'next/head';
 
 const CubeDemo = () => {
-    const [color, setColor] = useState('red');
+  const [color, setColor] = useState('red');
 
-    const changeColor = () => {
-      const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
-      setColor(colors[Math.floor(Math.random() * colors.length)]);
-    };
-    return (    <Scene>
+  const changeColor = () => {
+    const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+    setColor(colors[Math.floor(Math.random() * colors.length)]);
+  };
+  return (
+    <>
+      <Head>
+        <title>CubeDemo</title>
+        {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
+      </Head>
+      <Scene>
         <a-assets>
           <img
             id="groundTexture"
@@ -20,7 +27,7 @@ const CubeDemo = () => {
             src="https://cdn.aframe.io/a-painter/images/sky.jpg"
           />
         </a-assets>
-  
+
         <Entity
           primitive="a-plane"
           src="#groundTexture"
@@ -29,7 +36,12 @@ const CubeDemo = () => {
           width="100"
         />
         <Entity primitive="a-light" type="ambient" color="#445451" />
-        <Entity primitive="a-light" type="point" intensity="2" position="2 4 4" />
+        <Entity
+          primitive="a-light"
+          type="point"
+          intensity="2"
+          position="2 4 4"
+        />
         <Entity
           primitive="a-sky"
           height="2048"
@@ -43,7 +55,7 @@ const CubeDemo = () => {
           text={{ value: 'Hello, A-Frame React!', align: 'center' }}
           position={{ x: 0, y: 2, z: -1 }}
         />
-  
+
         <Entity
           id="box"
           geometry={{ primitive: 'box' }}
@@ -56,11 +68,13 @@ const CubeDemo = () => {
             material={{ color: '#24CAFF' }}
           />
         </Entity>
-  
+
         <Entity primitive="a-camera">
           <Entity primitive="a-cursor" />
         </Entity>
-      </Scene>  );
-}
- 
+      </Scene>
+    </>
+  );
+};
+
 export default CubeDemo;
