@@ -1,7 +1,8 @@
 import { Entity, Scene } from 'aframe-react';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Script from 'next/script';
+// import Script from 'next/script';
+import 'aframe';
 
 const BlankAframe = () => {
   const [xrReady, setXrReady] = useState(false);
@@ -47,9 +48,8 @@ const BlankAframe = () => {
             xrextras-one-finger-rotate
             position="0 0.5 0"
             material="
-            color: #AD50FF; shader: flat; 
+            color: #AD50FF; 
             src: https://cdn.8thwall.com/web/assets/cube-texture.png"
-            shadow
           />
 
           <Entity
@@ -57,8 +57,7 @@ const BlankAframe = () => {
             height="2000"
             width="2000"
             rotation="-90 0 0"
-            material="shader: shadow; opacity: 0.67"
-            shadow
+            material="opacity: 0.67"
           />
         </Scene>
       )}
