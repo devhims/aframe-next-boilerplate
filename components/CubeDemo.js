@@ -2,6 +2,7 @@ import { Entity, Scene } from 'aframe-react';
 import { useState } from 'react';
 import 'aframe';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const CubeDemo = () => {
   const [color, setColor] = useState('red');
