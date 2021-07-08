@@ -17,9 +17,8 @@ const CubeDemo = dynamic(
 
 export default function Home() {
   return (
-    <BlankAframe />
-    // <div style={{ width: '100%', height: '100%' }}>
-
-    // </div>
+    <div style={{ width: '100%', height: '100%' }}>
+      <BlankAframe />
+    </div>
   );
 }
