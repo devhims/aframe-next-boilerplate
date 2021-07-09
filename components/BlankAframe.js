@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 const BlankAframe = () => {
   const [xrReady, setXrReady] = useState(true);
+
   useEffect(() => {
     const watchWindow = setInterval(() => {
       if (window.XR8 && window.AFRAME && window.XRExtras) {
