@@ -4,7 +4,7 @@ import Head from 'next/head';
 // import Script from 'next/script';
 
 const BlankAframe = () => {
-  const [xrReady, setXrReady] = useState(false);
+  const [xrReady, setXrReady] = useState(true);
   useEffect(() => {
     const watchWindow = setInterval(() => {
       if (window.XR8 && window.AFRAME && window.XRExtras) {
