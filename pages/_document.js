@@ -19,7 +19,7 @@ class MyDocument extends Document {
             src="//apps.8thwall.com/xrweb?appKey=mSofXbWTdanwMZsJkSv5HKia091PsOzQa2IIMudbjs7FW5uMBkUGD2gQfVKSnyISXunV1Q"
           ></script>
         </Head>
-        <body style={{ width: '100vw', height: '100vh' }}>
+        <body>
           <Main />
           <NextScript />
         </body>
