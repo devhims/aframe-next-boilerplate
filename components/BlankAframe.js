@@ -40,6 +40,7 @@ const BlankAframe = () => {
         <Entity primitive="a-camera" position="0 2 2" />
 
         <Entity
+          primitive="a-box"
           xrextras-one-finger-rotate
           position="0 0.5 0"
           material="
