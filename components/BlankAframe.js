@@ -20,37 +20,32 @@ const BlankAframe = () => {
   if (xrReady) {
     return (
       <Scene
-        xrextras-gesture-detector
+        xrextras-tap-recenter
         xrextras-almost-there
         xrextras-loading=""
         xrextras-runtime-error
-        xrweb="disableWorldTracking: true"
-        id="ascene"
+        xrextras-gesture-detector
+        xrweb
       >
         <Entity
           primitive="a-light"
           light="
-              type: directional; 
-              castShadow: true; 
-              color: white; 
-              intensity: 0.5"
+            type: directional; 
+            castShadow: true; 
+            color: white; 
+            intensity: 0.5"
           position="5 10 7"
         />
 
-        <Entity
-          primitive="a-camera"
-          position="0 4 10"
-          raycaster="objects: .cantap"
-          cursor="fuse: false; rayOrigin: mouse;"
-        />
+        <Entity primitive="a-camera" position="0 2 2" />
 
         <Entity
-          primitive="a-box"
           xrextras-one-finger-rotate
           position="0 0.5 0"
           material="
-                    color: #AD50FF; 
-                    src: https://cdn.8thwall.com/web/assets/cube-texture.png"
+            color: #AD50FF; shader: flat; 
+            src: https://cdn.8thwall.com/web/assets/cube-texture.png"
+          shadow
         />
 
         <Entity
@@ -58,7 +53,8 @@ const BlankAframe = () => {
           height="2000"
           width="2000"
           rotation="-90 0 0"
-          material="opacity: 0.67"
+          material="shader: shadow; opacity: 0.67"
+          shadow
         />
       </Scene>
     );
