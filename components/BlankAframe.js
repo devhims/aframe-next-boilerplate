@@ -2,7 +2,7 @@ import { Entity, Scene } from 'aframe-react';
 import { useEffect, useState } from 'react';
 
 const BlankAframe = () => {
-  const [xrReady, setXrReady] = useState(true);
+  const [xrReady, setXrReady] = useState(false);
 
   useEffect(() => {
     const watchWindow = setInterval(() => {
