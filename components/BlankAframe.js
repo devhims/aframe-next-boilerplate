@@ -22,7 +22,7 @@ const BlankAframe = () => {
       <Scene
         xrextras-tap-recenter
         xrextras-almost-there
-        xrextras-loading
+        xrextras-loading=""
         xrextras-runtime-error
         xrextras-gesture-detector
         xrweb
