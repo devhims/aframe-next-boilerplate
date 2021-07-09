@@ -40,7 +40,7 @@ const BlankAframe = () => {
 
         <Entity
           primitive="a-box"
-          xrextras-one-finger-rotate
+          xrextras-one-finger-rotate=""
           position="0 0.5 0"
           material="
             color: #AD50FF; shader: flat; 
